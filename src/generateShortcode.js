@@ -1,8 +1,12 @@
 // src/generateShortcode.js
 
+const crypto = require('crypto');
 const wordList = require('./wordList.json');
 
-const getRandomWord = () => wordList[Math.floor(Math.random() * wordList.length)];
+const getRandomWord = () => {
+    const randomIndex = crypto.randomInt(0, wordList.length);
+    return wordList[randomIndex];
+};
 
 const generateShortcode = (numWords = 2) => {
     if (numWords < 1 ) {
@@ -15,6 +19,6 @@ const generateShortcode = (numWords = 2) => {
     
     const words = Array.from({ length: numWords }, getRandomWord);
     return words.join('-');
-}
+};
 
 module.exports = generateShortcode;
