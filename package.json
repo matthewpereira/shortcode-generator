@@ -1,0 +1,15 @@
+{
+  "name": "shortcode-generator",
+  "version": "1.0.0",
+  "description": "A simple project to generate random text combinations",
+  "main": "src/generateShortcode.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Matthew Pereira",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "keywords": []
+}
